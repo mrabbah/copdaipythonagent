@@ -1,1 +1,2 @@
-https://github.com/zeromq/pyre/archive/master.zip
+pyzmq
+zeromq-pyre==0.3.4
