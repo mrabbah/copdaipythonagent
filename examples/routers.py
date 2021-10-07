@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time
 import zmq
 import logging
@@ -25,6 +27,7 @@ def gc_decorator(critical_func):
     return wrapper
 
 
+@gc_decorator
 def run(l_node_name):
     logging.info("Lunching node: %s" % l_node_name)
     root_folder = "/tmp/"

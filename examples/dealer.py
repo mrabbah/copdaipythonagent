@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time
 import zmq
 import logging
@@ -22,8 +24,13 @@ def gc_decorator(critical_func):
         return critical_func(*args, **kwargs)
 
 
+# @gc_decorator
 def run():
     logging.info("Dealer Node Started")
+    gc.disable()
+    gc.set_threshold(0)
+    gc.set_threshold(0)
+    atexit.register(os._exit, 0)
     root_folder = "/tmp/"
     proto = "ipc://"
     topic_folder = "cdp"
