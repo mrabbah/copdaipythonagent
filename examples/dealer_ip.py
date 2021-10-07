@@ -37,8 +37,8 @@ def run(l_nb_nodes):
     sockets = []
     cmpt = 0
     while cmpt < l_nb_nodes:
-        port_number = 30000 + cmpt
-        topic = "tcp://localhost:%d" % port_number
+        port_number = 30000 + cmpt + 1
+        topic = "tcp://127.0.0.1:%d" % port_number
         socket = context.socket(zmq.DEALER)
         socket.setsockopt(zmq.LINGER, 0)
         socket.setsockopt(zmq.SNDTIMEO, 0)

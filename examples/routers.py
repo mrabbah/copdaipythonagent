@@ -27,7 +27,7 @@ def gc_decorator(critical_func):
     return wrapper
 
 
-@gc_decorator
+# @gc_decorator
 def run(l_node_name):
     logging.info("Lunching node: %s" % l_node_name)
     root_folder = "/tmp/"
